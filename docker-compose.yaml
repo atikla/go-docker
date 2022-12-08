@@ -1,0 +1,10 @@
+version: "3"
+services:
+  go:
+    image: "atikla/test-go"
+  nginx:
+    build: "./nginx"
+    ports:
+      - "80:80"
+    depends_on:
+      - "go"
